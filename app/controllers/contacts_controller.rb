@@ -5,6 +5,7 @@ class ContactsController < PublicController
   def create
     if contact.save
       flash[:notice] = t(:contact_was_successfully_created)
+      ContactMailer.my_message({contact_id: contact.id}).deliver_now
       redirect_to root_path(anchor: 'contact')
     else
       render :new

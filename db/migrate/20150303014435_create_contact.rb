@@ -5,6 +5,8 @@ class CreateContact < ActiveRecord::Migration
       t.string :email, default: ''
       t.string :subject, default: ''
       t.text :message, default: ''
+
+      t.timestamps
     end
   end
 end

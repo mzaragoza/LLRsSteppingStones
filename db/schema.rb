@@ -17,10 +17,12 @@ ActiveRecord::Schema.define(version: 20150303014435) do
   enable_extension "plpgsql"
 
   create_table "contacts", force: :cascade do |t|
-    t.string "name",    default: ""
-    t.string "email",   default: ""
-    t.string "subject", default: ""
-    t.text   "message", default: ""
+    t.string   "name",       default: ""
+    t.string   "email",      default: ""
+    t.string   "subject",    default: ""
+    t.text     "message",    default: ""
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
