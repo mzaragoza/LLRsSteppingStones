@@ -11,9 +11,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     / Bootstrap Core CSS
-    %link{:href => "/assets/css/bootstrap.min.css", :rel => "stylesheet"}/
-    %link{:href => "/assets/css/stylish-portfolio.css", :rel => "stylesheet"}/
-    %link{:href => "/assets/font-awesome/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
     /[if lt IE 9]
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -82,8 +79,6 @@
                   %i.fa.fa-dribbble.fa-fw.fa-3x
             %hr.small/
             %p.text-muted Copyright ©  LL&Rs Stepping Stones  2014 - #{DateTime.now.strftime('%Y')}
-    %script{:src => "/assets/js/jquery.js"}
-    %script{:src => "/assets/js/bootstrap.min.js"}
     :javascript
       $("#menu-close").click(function(e) {
           e.preventDefault();
