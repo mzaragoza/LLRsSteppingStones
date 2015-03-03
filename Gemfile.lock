@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/voxdolo/decent_exposure.git
+  revision: 08837d32ef73b40cf1a10846a134523460238dc8
+  specs:
+    decent_exposure (2.3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -58,6 +64,8 @@ GEM
     execjs (2.3.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
+    haml (4.0.6)
+      tilt
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.2.8)
@@ -119,6 +127,9 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slop (3.6.0)
     spring (1.3.3)
     sprockets (2.12.3)
@@ -152,12 +163,15 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  decent_exposure!
+  haml
   jbuilder (~> 2.0)
   jquery-rails
   pg
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simple_form
   spring
   turbolinks
   uglifier (>= 1.3.0)

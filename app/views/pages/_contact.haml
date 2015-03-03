@@ -1,0 +1,14 @@
+%section#contact.map
+  .container
+    .row
+      .col-lg-10.col-lg-offset-1
+        %h2 Contact Us
+        %hr
+        .row
+          .col-md-6.col-sm-12
+            = simple_form_for contact do |f|
+              = f.input :name
+              = f.input :email
+              = f.input :subject
+              = f.input :message
+              = f.button :submit

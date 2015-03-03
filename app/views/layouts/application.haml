@@ -1,0 +1,110 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "", :name => "author"}/
+    %title LL&Rs Stepping Stones
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    / Bootstrap Core CSS
+    %link{:href => "/assets/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/css/stylish-portfolio.css", :rel => "stylesheet"}/
+    %link{:href => "/assets/font-awesome/css/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  %body
+    %a#menu-toggle.btn.btn-dark.btn-lg.toggle{:href => "#"}
+      %i.fa.fa-bars
+    %nav#sidebar-wrapper
+      %ul.sidebar-nav
+        %a#menu-close.btn.btn-light.btn-lg.pull-right.toggle{:href => "#"}
+          %i.fa.fa-times
+        %li.sidebar-brand
+          = link_to '#top' do 
+            LL&Rs Stepping Stones
+        %li
+          = link_to '#top' do 
+            Home
+        %li
+          = link_to '#porograms_and_fees' do 
+            Programs & Fees
+        %li
+          = link_to '#our_staff' do 
+            Our Staff
+        %li
+          = link_to '#expectations' do 
+            Expectations
+        %li
+          = link_to '#about_us' do 
+            About Us
+        %li
+          = link_to '#contact' do 
+            Contact
+        %li
+          = link_to 'https://steppingstones.gocashbox.com/', :target => "_blank" do
+            Make A Payment
+    = yield
+    %footer
+      .container
+        .row
+          .col-lg-10.col-lg-offset-1.text-center
+            %h4
+              %strong LL&Rs Stepping Stones
+            %p
+              Take The First Step To A New Beginning
+            %ul.list-unstyled
+              %li
+                %i.fa.fa-phone.fa-fw
+                561-703-2001
+              %li
+                %i.fa.fa-envelope-o.fa-fw
+                = mail_to 'info@llrsteppingstones.com'
+            %p 
+              Office Hours: MON-SAT: 10:00AM - 10:00PM
+              %br
+              Office Hours: SUN: 11:00AM - 10:00PM
+            %br/
+            -#%ul.list-inline
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook.fa-fw.fa-3x
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter.fa-fw.fa-3x
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-dribbble.fa-fw.fa-3x
+            %hr.small/
+            %p.text-muted Copyright ©  LL&Rs Stepping Stones  2014 - #{DateTime.now.strftime('%Y')}
+    %script{:src => "/assets/js/jquery.js"}
+    %script{:src => "/assets/js/bootstrap.min.js"}
+    :javascript
+      $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+      $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  if (target.length) {
+                      $('html,body').animate({
+                          scrollTop: target.offset().top
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+      });
