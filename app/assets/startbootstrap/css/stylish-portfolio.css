@@ -74,11 +74,16 @@ body {
      width: 80%;
      margin: 20% auto!important;
      display:block;
+     overflow: scroll!important;
     }
     .butterflygif {
         position: absolute;
         left: -25%;
         top:-10%;
+    }
+    .bg-holder {
+      width: 100%;
+      height: 180%!important;
     }
 }
 .text-vertical-center {
