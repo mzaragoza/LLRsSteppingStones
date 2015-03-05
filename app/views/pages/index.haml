@@ -1,6 +1,17 @@
-= render 'top'
-= render 'porograms_and_fees'
-= render 'our_staff'
-= render 'expectations'
-= render 'about_us'
-= render 'contact'
+#pic0.bg-holder{"data-height" => "768", "data-width" => "1024"}
+  = render 'top'
+%section
+  = render 'porograms_and_fees'
+#pic2.bg-holder{"data-height" => "768", "data-width" => "1024"}
+  %section
+    = render 'expectations'
+%section
+  = render 'our_staff'
+#pic3.bg-holder{"data-height" => "768", "data-width" => "1024"}
+  .container
+    %h1.quote JUST AS THE CATERPILLAR THOUGHT THE WORLD WAS OVER, IT BECAME A BUTTERFLY ...
+%section
+  = render 'about_us'
+#pic1.bg-holder{"data-height" => "768", "data-width" => "1024"}
+  = render 'contact' 
+

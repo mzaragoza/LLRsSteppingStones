@@ -82,6 +82,12 @@
             %hr.small/
             %p.text-muted Copyright ©  LL&Rs Stepping Stones  2014 - #{DateTime.now.strftime('%Y')}
     :javascript
+      $( ".read-more-btn" ).click(function() {
+        $( ".read-more" ).slideToggle( "slow" );
+      });
+      $('.bg-holder').parallaxScroll({
+        friction: 0.2
+      });
       $("#menu-close").click(function(e) {
           e.preventDefault();
           $("#sidebar-wrapper").toggleClass("active");
